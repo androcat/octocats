@@ -1,0 +1,16 @@
+.octodex {
+  list-style-type: none;
+}
+
+img {
+  width: 33%;
+}
+
+.octocat {
+  display: inline-block;
+}
+
+.authors img {
+  width: 10%;
+  height: 10%;
+}
