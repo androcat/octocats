@@ -1,16 +1,63 @@
-.octodex {
+.octodex,
+.authors {
   list-style-type: none;
+  padding-in-left: 0;
 }
 
-img {
-  width: 33%;
-}
-
+/* .authors li,
+.octocat { */
 .octocat {
   display: inline-block;
+  border-bottom: 2px solid rgb(183, 183, 183);
+  width: 30%;
+}
+
+.octocat img {
+  border: 1px solid rgb(183, 183, 183);
+  border-radius: 1%;
+  max-width: 100%;
 }
 
 .authors img {
+  border: none;
   width: 10%;
   height: 10%;
+}
+
+.image-footer {
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.image-number {
+  color: rgb(183, 183, 183);
+  display: inline-block;
+}
+
+.image-number::before {
+  content: "#";
+}
+
+.image-caption {
+  /* text-align: right; */
+  display: inline-block;
+
+  /* white-space: nowrap; */
+}
+
+.image-caption span {
+  /* border: 1px solid red; */
+  display: inline-block;
+}
+
+.image-caption a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+}
+
+.authors,
+.authors li {
+  display: inline-block;
 }
