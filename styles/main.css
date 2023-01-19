@@ -1,17 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* ul */
 .octodex,
 .authors {
-  list-style-type: none;
-  padding-in-left: 0;
+  list-style-type: none; /* Takes away bullet points */
+  padding: 0; /* To get rid of the browser 40px left padding */
+  text-align: center; /* Centers the lists */
 }
 
-/* .authors li,
-.octocat { */
+img {
+  width: 100%; /* So that the image will be 100% width of parent*/
+}
+
 .octocat {
-  display: inline-block;
-  border-bottom: 2px solid rgb(183, 183, 183);
+  display: inline-block; /*makes the li item octocat able to have a width and height set*/
+  font-family: Arial, Helvetica, sans-serif;
   width: 30%;
+  height: 100%;
+  border-bottom: solid 1px #cacaca;
 }
 
+.octocat > a {
+  /* Selecting all link/a elements that are children of the octocat li element */
+  border: solid 1px #cacaca;
+  display: inline-block;
+  height: 100%;
+  border-radius: 3px;
+  position: relative; /* So that children can be positioned absolute and move relative to it */
+}
+
+/* Creates downward triagnle and positions it */
+.octocat > a::after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: solid 10px #cacaca;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  position: absolute;
+  top: 100%;
+  right: 1%;
+}
+
+.image-number::before {
+  content: "#";
+}
+
+.image-footer {
+  padding-top: 15px; /* Add a bit of padding */
+  padding-bottom: 15px;
+  position: relative; /* So that children can be positioned absolute and move relative to it */
+}
+
+.image-number {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* move back up 50% of its hieght*/
+  left: 0;
+}
+
+.authors > li > a {
+  /* get all link/a elements that are the childen of li elements that are the children of the authors class*/
+  display: inline-block;
+  width: 30px;
+}
+
+.authors {
+  display: inline-block;
+}
+
+.image-caption {
+  text-align: right;
+}
+
+.image-caption a {
+  font-weight: bold;
+}
+
+.image-caption a {
+  text-decoration: none;
+  color: black;
+}
+
+.authors img {
+  vertical-align: middle;
+  border-radius: 5px;
+}
+/* .image-caption span {
+  /* border: 1px solid red; 
+  display: inline-block;
+}
 .octocat img {
   border: 1px solid rgb(183, 183, 183);
   border-radius: 1%;
@@ -39,25 +123,23 @@
 }
 
 .image-caption {
-  /* text-align: right; */
-  display: inline-block;
+  /* text-align: right; display: 
+  inline-block;
 
-  /* white-space: nowrap; */
+
+/* white-space: nowrap; 
 }
 
-.image-caption span {
-  /* border: 1px solid red; */
-  display: inline-block;
-}
 
-.image-caption a {
+
+/* .image-caption a {
   text-decoration: none;
   font-weight: bold;
   color: black;
   display: inline-block;
-}
+} 
 
 .authors,
 .authors li {
   display: inline-block;
-}
+} */
